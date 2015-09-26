@@ -47,7 +47,8 @@ if (taskName === 'build-dist') {
 // ============================================================================
 
 gulp.task('clean', function(callback) {
-  del([dirName], callback);
+  del.sync([dirName]);
+  callback();
 });
 
 
